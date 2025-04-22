@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cormorant_Garamond, Montserrat } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/ui/header";
+import { Footer } from "@/components/ui/footer";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -18,8 +19,19 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Coach Holistique | Bien-être & Développement personnel",
-  description: "Accompagnement holistique personnalisé pour votre épanouissement physique, mental et émotionnel.",
+  title: "Elisabeth | Coach Holistique & Accompagnement Bien-être",
+  description: "Accompagnement holistique personnalisé pour votre épanouissement physique, mental et émotionnel. Développez votre plein potentiel et retrouvez l'harmonie intérieure.",
+  keywords: "coach holistique, bien-être, développement personnel, méditation, équilibre, harmonie, spiritualité, accompagnement, épanouissement",
+  authors: [{ name: "Elisabeth" }],
+  creator: "Elisabeth",
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    url: "https://www.elisabethcoach.fr",
+    title: "Elisabeth | Coach Holistique & Accompagnement Bien-être",
+    description: "Accompagnement holistique personnalisé pour votre épanouissement physique, mental et émotionnel.",
+    siteName: "Elisabeth Coach Holistique",
+  },
 };
 
 export default function RootLayout({
@@ -29,9 +41,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={`${cormorant.variable} ${montserrat.variable}`}>
-      <body className="antialiased font-sans">
+      <body className="antialiased font-sans min-h-screen flex flex-col">
         <Header />
-        {children}
+        <div className="flex-grow">{children}</div>
+        <Footer />
       </body>
     </html>
   );
