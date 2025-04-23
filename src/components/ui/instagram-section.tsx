@@ -10,37 +10,37 @@ import { Button } from "./button";
 const instagramPosts = [
   {
     id: 1,
-    imageUrl: "/instagram-1.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&h=800",
     caption: "Méditation matinale, le meilleur moyen de commencer la journée",
     likes: 152,
   },
   {
     id: 2,
-    imageUrl: "/instagram-2.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&h=800",
     caption: "La nature est notre plus grand enseignant",
     likes: 237,
   },
   {
     id: 3,
-    imageUrl: "/instagram-3.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&h=800",
     caption: "Atelier de pleine conscience en plein air",
     likes: 183,
   },
   {
     id: 4,
-    imageUrl: "/instagram-4.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&h=800",
     caption: "Se reconnecter à soi, un pas à la fois",
     likes: 201,
   },
   {
     id: 5,
-    imageUrl: "/instagram-5.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&h=800",
     caption: "Respirez, relâchez, ressentez",
     likes: 169,
   },
   {
     id: 6,
-    imageUrl: "/instagram-6.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&h=800",
     caption: "Notre bien-être commence par de petits rituels quotidiens",
     likes: 215,
   },

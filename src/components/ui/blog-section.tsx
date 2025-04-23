@@ -14,7 +14,7 @@ const blogPosts = [
     title: "Comment développer sa conscience de soi au quotidien",
     excerpt: "Découvrez 5 pratiques simples pour renforcer votre connexion à vous-même et vivre en pleine conscience.",
     category: "Mindfulness",
-    imageUrl: "/blog-1.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&h=800",
     date: "15 juin 2023",
     slug: "developper-conscience-de-soi"
   },
@@ -23,7 +23,7 @@ const blogPosts = [
     title: "Les rituels du matin pour une journée harmonieuse",
     excerpt: "Un matin serein influence positivement toute votre journée. Voici les rituels que je recommande à mes clients.",
     category: "Bien-être",
-    imageUrl: "/blog-2.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&h=800",
     date: "3 mai 2023",
     slug: "rituels-matin-harmonieux"
   },
@@ -32,7 +32,7 @@ const blogPosts = [
     title: "Comment surmonter les blocages émotionnels",
     excerpt: "Les émotions refoulées peuvent créer des blocages profonds. Apprenez à les identifier et les libérer.",
     category: "Émotions",
-    imageUrl: "/blog-3.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&h=800",
     date: "28 avril 2023",
     slug: "surmonter-blocages-emotionnels"
   },
@@ -85,33 +85,31 @@ function BlogCard({ post, index }: { post: typeof blogPosts[0], index: number })
 
 export function BlogSection() {
   return (
-    <section className="py-20 bg-muted/20">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4">Le Blog</Badge>
-          <h2 className="text-3xl md:text-4xl font-cormorant font-light mb-6">
-            Inspirations & <span className="font-medium">Ressources</span>
-          </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Découvrez mes articles pour vous accompagner dans votre cheminement personnel
-            et vous inspirer au quotidien.
-          </p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {blogPosts.map((post, index) => (
-            <BlogCard key={post.id} post={post} index={index} />
-          ))}
-        </div>
-        
-        <div className="text-center mt-12">
-          <Link href="/blog">
-            <Button variant="ghost" size="lg" className="text-primary hover:text-accent transition-colors">
-              Voir tous les articles
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </Link>
-        </div>
+    <section className="container py-24 bg-background">
+      <div className="text-center mb-16">
+        <Badge variant="outline" className="mb-4">Le Blog</Badge>
+        <h2 className="text-3xl md:text-4xl font-cormorant font-light mb-6">
+          Inspirations & <span className="font-medium">Ressources</span>
+        </h2>
+        <p className="text-muted-foreground max-w-2xl mx-auto">
+          Découvrez mes articles pour vous accompagner dans votre cheminement personnel
+          et vous inspirer au quotidien.
+        </p>
+      </div>
+      
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {blogPosts.map((post, index) => (
+          <BlogCard key={post.id} post={post} index={index} />
+        ))}
+      </div>
+      
+      <div className="text-center mt-12">
+        <Link href="/blog">
+          <Button variant="ghost" size="lg" className="text-primary hover:text-accent transition-colors">
+            Voir tous les articles
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
+        </Link>
       </div>
     </section>
   );

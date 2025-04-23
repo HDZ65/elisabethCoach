@@ -40,49 +40,47 @@ function ServiceItem({ icon, title, description, delay }: ServiceItemProps) {
 
 export function ServicesSection() {
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4">Services</Badge>
-          <h2 className="text-3xl md:text-4xl font-cormorant font-light mb-6">
-            Une approche <span className="font-medium">holistique</span>
-          </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Je vous accompagne dans un processus de transformation, en prenant en compte 
-            toutes les dimensions de votre être pour un mieux-être durable.
-          </p>
-        </div>
+    <section className="container py-24 bg-background">
+      <div className="text-center mb-16">
+        <Badge variant="outline" className="mb-4">Services</Badge>
+        <h2 className="text-3xl md:text-4xl font-cormorant font-light mb-6">
+          Une approche <span className="font-medium">holistique</span>
+        </h2>
+        <p className="text-muted-foreground max-w-2xl mx-auto">
+          Je vous accompagne dans un processus de transformation, en prenant en compte 
+          toutes les dimensions de votre être pour un mieux-être durable.
+        </p>
+      </div>
+      
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <ServiceItem 
+          icon={<Heart className="h-6 w-6 text-accent" strokeWidth={1.5} />}
+          title="Accompagnement émotionnel"
+          description="Libérez vos émotions bloquées et transformez-les en ressources pour avancer sereinement dans votre vie."
+          delay={1}
+        />
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          <ServiceItem 
-            icon={<Heart className="h-6 w-6 text-accent" strokeWidth={1.5} />}
-            title="Accompagnement émotionnel"
-            description="Libérez vos émotions bloquées et transformez-les en ressources pour avancer sereinement dans votre vie."
-            delay={1}
-          />
-          
-          <ServiceItem 
-            icon={<Brain className="h-6 w-6 text-accent" strokeWidth={1.5} />}
-            title="Développement personnel"
-            description="Explorez vos talents et potentiels cachés pour créer une vie alignée avec vos aspirations profondes."
-            delay={2}
-          />
-          
-          <ServiceItem 
-            icon={<Leaf className="h-6 w-6 text-accent" strokeWidth={1.5} />}
-            title="Bien-être holistique"
-            description="Retrouvez l'équilibre entre votre corps, votre esprit et vos émotions pour une santé globale optimale."
-            delay={3}
-          />
-        </div>
+        <ServiceItem 
+          icon={<Brain className="h-6 w-6 text-accent" strokeWidth={1.5} />}
+          title="Développement personnel"
+          description="Explorez vos talents et potentiels cachés pour créer une vie alignée avec vos aspirations profondes."
+          delay={2}
+        />
         
-        <div className="text-center mt-12">
-          <Link href="/programmes">
-            <Button variant="accent" size="lg" withHoverEffect={true}>
-              Découvrir tous les programmes
-            </Button>
-          </Link>
-        </div>
+        <ServiceItem 
+          icon={<Leaf className="h-6 w-6 text-accent" strokeWidth={1.5} />}
+          title="Bien-être holistique"
+          description="Retrouvez l'équilibre entre votre corps, votre esprit et vos émotions pour une santé globale optimale."
+          delay={3}
+        />
+      </div>
+      
+      <div className="text-center mt-12">
+        <Link href="/programmes">
+          <Button variant="accent" size="lg" withHoverEffect={true}>
+            Découvrir tous les programmes
+          </Button>
+        </Link>
       </div>
     </section>
   );

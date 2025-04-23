@@ -26,7 +26,7 @@ const programmes = [
     level: "Débutant",
     duration: "8 semaines",
     price: "1 200€",
-    image: "/programme-1.jpg",
+    image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80",
     shortDescription: "Un parcours complet pour retrouver votre alignement et développer une vision positive de votre vie.",
     benefits: [
       "Techniques de méditation adaptées aux débutants",
@@ -43,7 +43,7 @@ const programmes = [
     level: "Intermédiaire",
     duration: "10 semaines",
     price: "1 600€",
-    image: "/programme-2.jpg",
+    image: "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&q=80",
     shortDescription: "Transformez votre relation à vos émotions pour une vie plus équilibrée et authentique.",
     benefits: [
       "Cartographie émotionnelle personnalisée",
@@ -60,7 +60,7 @@ const programmes = [
     level: "Tous niveaux",
     duration: "6 semaines",
     price: "950€",
-    image: "/programme-3.jpg",
+    image: "https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&q=80",
     shortDescription: "Développez votre pratique de pleine conscience pour une présence totale dans l'instant.",
     benefits: [
       "Techniques de méditation guidée et autonome",
@@ -77,7 +77,7 @@ const programmes = [
     level: "Avancé",
     duration: "12 semaines",
     price: "2 200€",
-    image: "/programme-4.jpg",
+    image: "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80",
     shortDescription: "Un programme intensif pour celles et ceux qui souhaitent transformer profondément leur vie.",
     benefits: [
       "Accompagnement personnalisé et suivi quotidien",

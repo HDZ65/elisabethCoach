@@ -35,64 +35,62 @@ export function TestimonialSection() {
   const testimonial = testimonials[current];
   
   return (
-    <section className="py-20 bg-accent/5">
-      <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto relative">
-          <motion.div
-            key={testimonial.id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
-            className="flex flex-col items-center text-center px-6"
-          >
-            <div className="bg-accent/10 p-3 rounded-full mb-8">
-              <Quote className="h-6 w-6 text-accent" strokeWidth={1.5} />
-            </div>
-            
-            <blockquote className="text-xl md:text-2xl font-cormorant font-light mb-6 leading-relaxed">
-              "{testimonial.quote}"
-            </blockquote>
-            
-            <div className="mt-4">
-              <p className="font-medium">{testimonial.author}</p>
-              <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-            </div>
-          </motion.div>
-          
-          {/* Contrôles */}
-          <div className="flex justify-center space-x-3 mt-10">
-            <button
-              onClick={prev}
-              className="p-2 rounded-full border border-muted hover:bg-accent/10 transition-colors"
-              aria-label="Témoignage précédent"
-            >
-              <ChevronLeft className="h-5 w-5" />
-            </button>
-            
-            {/* Indicateurs */}
-            <div className="flex items-center space-x-2">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrent(index)}
-                  className={cn(
-                    "w-2 h-2 rounded-full transition-all duration-300",
-                    current === index ? "bg-accent w-6" : "bg-muted"
-                  )}
-                  aria-label={`Voir témoignage ${index + 1}`}
-                />
-              ))}
-            </div>
-            
-            <button
-              onClick={next}
-              className="p-2 rounded-full border border-muted hover:bg-accent/10 transition-colors"
-              aria-label="Témoignage suivant"
-            >
-              <ChevronRight className="h-5 w-5" />
-            </button>
+    <section className="container py-24 bg-background">
+      <div className="max-w-5xl mx-auto relative">
+        <motion.div
+          key={testimonial.id}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.5 }}
+          className="flex flex-col items-center text-center px-6"
+        >
+          <div className="bg-accent/10 p-3 rounded-full mb-8">
+            <Quote className="h-6 w-6 text-accent" strokeWidth={1.5} />
           </div>
+          
+          <blockquote className="text-xl md:text-2xl font-cormorant font-light mb-6 leading-relaxed">
+            "{testimonial.quote}"
+          </blockquote>
+          
+          <div className="mt-4">
+            <p className="font-medium">{testimonial.author}</p>
+            <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+          </div>
+        </motion.div>
+        
+        {/* Contrôles */}
+        <div className="flex justify-center space-x-3 mt-10">
+          <button
+            onClick={prev}
+            className="p-2 rounded-full border border-muted hover:bg-accent/10 transition-colors"
+            aria-label="Témoignage précédent"
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </button>
+          
+          {/* Indicateurs */}
+          <div className="flex items-center space-x-2">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrent(index)}
+                className={cn(
+                  "w-2 h-2 rounded-full transition-all duration-300",
+                  current === index ? "bg-accent w-6" : "bg-muted"
+                )}
+                aria-label={`Voir témoignage ${index + 1}`}
+              />
+            ))}
+          </div>
+          
+          <button
+            onClick={next}
+            className="p-2 rounded-full border border-muted hover:bg-accent/10 transition-colors"
+            aria-label="Témoignage suivant"
+          >
+            <ChevronRight className="h-5 w-5" />
+          </button>
         </div>
       </div>
     </section>
